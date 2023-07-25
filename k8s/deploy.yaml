@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: my-gpt-flask-app
+
+  labels:
+
+    app: my-gpt-flask-app
+
+spec:
+
+  replicas: 3
+
+  selector:
+
+    matchLabels:
+
+      app: my-gpt-flask-app
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: my-gpt-flask-app
+
+    spec:
+
+      containers:
+
+      - name: my-gpt-flask-app
+
+        image: rahulgangwar8954/my-gpt-flask-app
+
+        ports:
+
+        - containerPort: 5000
+

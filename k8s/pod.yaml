@@ -1,0 +1,20 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: my-gpt-flask-app
+
+spec:
+
+  containers:
+
+  - name: my-gpt-flask-app
+
+    image: rahulgangwar8954/my-gpt-flask-app
+
+    ports:
+
+    - containerPort: 5000
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenAI Search Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>OpenAI Search Engine</h1>
+    <form method="POST">
+        <label for="prompt">Enter your search query:</label>
+        <input type="text" name="prompt" id="prompt" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    {% if response %}
+        <h2>Generated Text:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+    <script src="script.js"></script>
+</body>
+</html>
